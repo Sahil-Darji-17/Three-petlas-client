@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 
 const defaultMembers = [
   { name: 'Dr. Priya Sharma', role: 'Lead Physiotherapist', img: '/team/member1.jpg', id: 1 },
@@ -14,7 +15,7 @@ function TeamCard({ member }: { member: typeof defaultMembers[0] }) {
     <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center border border-orange-200">
       <div className="w-28 h-28 rounded-full bg-orange-100 flex items-center justify-center mb-4 overflow-hidden">
         {member.img ? (
-          <img src={member.img} alt={member.name} className="w-full h-full object-cover" onError={e => (e.currentTarget.style.display = 'none')} />
+          <Image src={member.img} alt={member.name} width={112} height={112} className="w-full h-full object-cover" onError={e => (e.currentTarget.style.display = 'none')} />
         ) : (
           <span className="text-5xl text-orange-400">👤</span>
         )}

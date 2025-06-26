@@ -40,13 +40,6 @@ const services = [
   }
 ];
 
-const colorClasses = {
-  green: "bg-orange-50 text-orange-600 border-orange-200",
-  blue: "bg-orange-50 text-orange-600 border-orange-200",
-  purple: "bg-orange-50 text-orange-600 border-orange-200",
-  teal: "bg-orange-50 text-orange-600 border-orange-200"
-};
-
 export default function ServicesPreview() {
   return (
     <section id="services" className="py-20 bg-white">
