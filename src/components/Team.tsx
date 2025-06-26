@@ -28,15 +28,15 @@ function TeamCard({ member }: { member: typeof defaultMembers[0] }) {
 
 export default function Team() {
   return (
-    <section id="team" className="py-20 bg-white">
+    <section id="team" className="py-16 sm:py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-600 mb-4">Meet Our Team</h2>
-          <p className="text-lg text-orange-500 max-w-2xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-2 sm:mb-4">Meet Our Team</h2>
+          <p className="text-base sm:text-lg text-orange-500 max-w-2xl mx-auto">
             Our expert team is dedicated to your health, fitness, and recovery. Get to know the professionals who will guide you on your wellness journey.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {defaultMembers.map((member) => (
             <TeamCard key={member.id} member={member} />
           ))}

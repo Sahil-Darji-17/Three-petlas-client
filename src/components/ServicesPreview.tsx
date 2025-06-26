@@ -42,40 +42,40 @@ const services = [
 
 export default function ServicesPreview() {
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-600 mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-orange-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-orange-600 max-w-3xl mx-auto">
             Comprehensive healthcare services tailored to your needs. From physiotherapy to fitness training, 
             we provide expert care to help you achieve optimal health and wellness.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group relative flex flex-col h-full bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100"
+              className="group relative flex flex-col h-full bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100"
             >
               {/* Title */}
-              <h3 className="text-xl font-bold text-orange-600 mb-4">
+              <h3 className="text-lg sm:text-xl font-bold text-orange-600 mb-2 sm:mb-4">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-orange-600 mb-6 leading-relaxed">
+              <p className="text-orange-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 {service.description}
               </p>
 
               {/* Features */}
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-orange-600">
+                  <li key={featureIndex} className="flex items-center text-xs sm:text-sm text-orange-600">
                     {feature}
                   </li>
                 ))}
@@ -85,12 +85,12 @@ export default function ServicesPreview() {
               <button
                 className={
                   service.color === 'green'
-                    ? 'w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300'
+                    ? 'w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors duration-300'
                     : service.color === 'blue'
-                    ? 'w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300'
+                    ? 'w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors duration-300'
                     : service.color === 'purple'
-                    ? 'w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300'
-                    : 'w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300'
+                    ? 'w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors duration-300'
+                    : 'w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors duration-300'
                 }
               >
                 Book Appointment
@@ -103,15 +103,15 @@ export default function ServicesPreview() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-orange-600 mb-4">
+        <div className="text-center mt-10 sm:mt-16">
+          <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto">
+            <h3 className="text-xl sm:text-2xl font-bold text-orange-600 mb-2 sm:mb-4">
               Ready to Start Your Health Journey?
             </h3>
-            <p className="text-orange-600 mb-6">
+            <p className="text-orange-600 mb-4 sm:mb-6 text-sm sm:text-base">
               Book a free consultation with our expert physiotherapists and get a personalized treatment plan.
             </p>
-            <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105">
+            <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105 text-sm sm:text-base">
               Get Free Consultation
             </button>
           </div>
